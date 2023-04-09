@@ -1,0 +1,9 @@
+<xml>
+    <ModInfo>
+        <Name value="Days Remaining" />
+        <Description value="Update trader restock date and vending expiration date to show days until vs date of." />
+        <Author value="Jonathan Robertson (Kanaverum)" />
+        <Version value="0.1.0" />
+        <Website value="https://github.com/jonathan-robertson/days-remaining" />
+    </ModInfo>
+</xml>

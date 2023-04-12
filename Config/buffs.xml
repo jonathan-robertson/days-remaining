@@ -1,0 +1,12 @@
+<config>
+    <append xpath="/buffs">
+        <buff name="buffDaysRemainingVendingExpiration" icon="ui_game_symbol_vending">
+            <duration value="10" />
+            <stack_type value="ignore" />
+
+            <display_value_key value="{0} Days" />
+            <display_value value="daysRemainingVendingExpiration" />
+            <!-- <display_value_format value="time" /> -->
+        </buff>
+    </append>
+</config>

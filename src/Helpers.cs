@@ -1,7 +1,24 @@
-﻿namespace DaysRemaining
+﻿using System;
+
+namespace DaysRemaining
 {
     internal class Helpers
     {
+        private static readonly ModLog<Helpers> _log = new ModLog<Helpers>();
+
+        public static bool TryGetTileEntityVendingMachine(Vector3i blockPos, out TileEntityVendingMachine tileEntityVendingMachine)
+        {
+            var world = GameManager.Instance.World;
+            var tileEntity = world.GetTileEntity(world.ChunkCache.ClusterIdx, blockPos);
+            if (tileEntity == null || !(tileEntity is TileEntityVendingMachine te))
+            {
+                tileEntityVendingMachine = null;
+                return false;
+            }
+            tileEntityVendingMachine = te;
+            return true;
+        }
+
         public static bool TryGetTileEntityVendingMachine(TileEntity tileEntity, out TileEntityVendingMachine tileEntityVendingMachine)
         {
             if (tileEntity is TileEntityVendingMachine te)
@@ -25,24 +42,48 @@
             return clientInfo != null;
         }
 
-        public static void SetExpirationDaysRemaining(EntityPlayer player)
+        public static bool TryGetClientInfo(int entityId, out ClientInfo clientInfo)
         {
-            SetExpirationDaysRemaining(player, player.RentalEndDay);
+            clientInfo = ConnectionManager.Instance.Clients.ForEntityId(entityId);
+            return clientInfo != null;
         }
 
-        public static void SetExpirationDaysRemaining(EntityPlayer player, int rentalEndDay)
+        public static bool TryGetVendingMachineRentalData(Vector3i blockPos, out PlatformUserIdentifierAbs owner, out int rentalEndDay)
         {
-            if (rentalEndDay == 0)
+            if (!TryGetTileEntityVendingMachine(blockPos, out var tileEntityVendingMachine))
+            {
+                _log.Warn($"could not find vending machine tile entity at {blockPos}");
+                owner = null;
+                rentalEndDay = 0;
+                return false;
+            }
+            owner = tileEntityVendingMachine.GetOwner();
+            rentalEndDay = tileEntityVendingMachine.RentalEndDay;
+            return true;
+        }
+
+        /// <summary>
+        /// Call this to update the player's client-side data related to vending expiration date.
+        /// </summary>
+        /// <param name="clientInfo">ClientInfo containing the current rental information.</param>
+        /// <param name="player">EntityPlayer to update.</param>
+        public static void SetExpirationDaysRemaining(ClientInfo clientInfo, EntityPlayer player)
+        {
+            if (clientInfo == null || player == null)
+            {
+                _log.Warn($"ClientInfo and EntityPlayer params must not be null; ClientInfo {(clientInfo != null ? "exists" : "does not exist")}, EntityPlayer {(player != null ? "exists" : "does not exist")}.");
+                return;
+            }
+            if (clientInfo.latestPlayerData.rentalEndDay == 0)
             {
                 return;
             }
-            var daysRemaining = rentalEndDay - GameUtils.WorldTimeToDays(GameManager.Instance.World.worldTime);
-            if (daysRemaining < 0)
+            var daysRemaining = Math.Max(clientInfo.latestPlayerData.rentalEndDay - GameUtils.WorldTimeToDays(GameManager.Instance.World.worldTime), 0);
+            if (daysRemaining != player.GetCVar("daysRemainingVendingExpiration"))
             {
-                daysRemaining = 0;
+                player.SetCVar("daysRemainingVendingExpiration", daysRemaining);
+                _ = player.Buffs.AddBuff("buffDaysRemainingVendingExpiration");
             }
-            player.SetCVar("daysRemainingVendingExpiration", daysRemaining);
-            _ = player.Buffs.AddBuff("buffDaysRemainingVendingExpiration");
         }
     }
 }

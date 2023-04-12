@@ -10,11 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - update trader restock on day change
 - update trader restock on login
 - update trader restock ui to days remaining
-- update vend expiration on day change
 - update vend expiration ui to days remaining
 
 ## [UNRELEASED]
 
 - add vend expiration buff
+- update vend expiration on day change
 - update vend expiration on login
 - update vend expiration on rent

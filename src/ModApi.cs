@@ -25,7 +25,7 @@ namespace DaysRemaining
         {
             try
             {
-                if (_cInfo == null)
+                if (_cInfo == null) // is client local?
                 {
                     // TODO: var ppId = ((_cInfo != null) ? _cInfo.InternalId : null) ?? PlatformManager.InternalLocalUserIdentifier;
                     return;
@@ -36,7 +36,7 @@ namespace DaysRemaining
                     case RespawnType.JoinMultiplayer:
                         if (GameManager.Instance.World.Players.dict.TryGetValue(_cInfo.entityId, out var player))
                         {
-                            Helpers.SetExpirationDaysRemaining(player);
+                            Helpers.SetExpirationDaysRemaining(_cInfo, player);
                         }
                         return;
                 }

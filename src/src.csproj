@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="Helpers.cs" />
     <Compile Include="ModLog.cs" />
-    <Compile Include="NetPackageTileEntity_Patches.cs" />
+    <Compile Include="Patches.cs" />
     <Compile Include="ModApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

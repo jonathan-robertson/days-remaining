@@ -5,6 +5,8 @@ namespace DaysRemaining
     internal class Helpers
     {
         private static readonly ModLog<Helpers> _log = new ModLog<Helpers>();
+        private static readonly string CVAR_VENDING_EXPIRATION = "daysRemainingVendingExpiration";
+        private static readonly string BUFF_VENDING_EXPIRATION = "buffDaysRemainingVendingExpiration";
 
         public static bool TryGetTileEntityVendingMachine(Vector3i blockPos, out TileEntityVendingMachine tileEntityVendingMachine)
         {
@@ -79,10 +81,10 @@ namespace DaysRemaining
                 return;
             }
             var daysRemaining = Math.Max(clientInfo.latestPlayerData.rentalEndDay - GameUtils.WorldTimeToDays(GameManager.Instance.World.worldTime), 0);
-            if (daysRemaining != player.GetCVar("daysRemainingVendingExpiration"))
+            if (daysRemaining != player.GetCVar(CVAR_VENDING_EXPIRATION))
             {
-                player.SetCVar("daysRemainingVendingExpiration", daysRemaining);
-                _ = player.Buffs.AddBuff("buffDaysRemainingVendingExpiration");
+                player.SetCVar(CVAR_VENDING_EXPIRATION, daysRemaining);
+                _ = player.Buffs.AddBuff(BUFF_VENDING_EXPIRATION);
             }
         }
     }

@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2023-06-13
 
+- update readme
 - update to a21 mod-info file format
 
 ## [0.1.0] - 2023-04-14

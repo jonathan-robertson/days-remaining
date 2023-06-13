@@ -1,6 +1,6 @@
 # Days Remaining
 
-[![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-A20.6%20b9-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml)
+[![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-A21%20b313-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml)
 
 - [Days Remaining](#days-remaining)
   - [Summary](#summary)
@@ -26,5 +26,5 @@ This mod is designed to be used with another to complete your experience:
 Environment | Compatible | Does EAC Need to be Disabled? | Who needs to install?
 --- | --- | --- | ---
 Dedicated Server | Yes | no | only server
-Peer-to-Peer Hosting | Yes | only on the host | only the host
-Single Player Game | Yes | Yes | self (of course)
+Peer-to-Peer Hosting | Untested | N/A | N/A
+Single Player Game | Untested | N/A | N/A

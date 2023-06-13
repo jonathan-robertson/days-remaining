@@ -4,9 +4,10 @@ namespace DaysRemaining
 {
     internal class Helpers
     {
+        private const string CVAR_VENDING_EXPIRATION = "daysRemainingVendingExpiration";
+        private const string BUFF_VENDING_EXPIRATION = "buffDaysRemainingVendingExpiration";
+
         private static readonly ModLog<Helpers> _log = new ModLog<Helpers>();
-        private static readonly string CVAR_VENDING_EXPIRATION = "daysRemainingVendingExpiration";
-        private static readonly string BUFF_VENDING_EXPIRATION = "buffDaysRemainingVendingExpiration";
 
         public static bool TryGetTileEntityVendingMachine(Vector3i blockPos, out TileEntityVendingMachine tileEntityVendingMachine)
         {

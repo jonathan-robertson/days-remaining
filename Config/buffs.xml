@@ -1,6 +1,6 @@
 <config>
     <append xpath="/buffs">
-        <buff name="buffDaysRemainingVendingExpiration" name_key="buffDaysRemainingVendingExpirationName" description_key="buffDaysRemainingVendingExpirationDesc" tooltip_key="buffDaysRemainingVendingExpirationTooltip" icon="ui_game_symbol_vending" icon_color="0,127,255">
+        <buff name="buffDaysRemainingVendingExpiration" name_key="buffDaysRemainingVendingExpirationName" description_key="buffDaysRemainingVendingExpirationDesc" tooltip_key="buffDaysRemainingVendingExpirationTooltip" icon="ui_game_symbol_vending" icon_color="255,255,0">
             <duration value="30" />
             <stack_type value="duration" />
             <display_value_key value="buffDaysRemainingVendingExpirationFormat" />

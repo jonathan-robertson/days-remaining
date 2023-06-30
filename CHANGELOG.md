@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - update trader restock on login
 - update trader restock ui to days remaining
 
+## [1.0.1] - 2023-06-30
+
+- update to support a21 b324 (stable)
+
 ## [1.0.0] - 2023-06-13
 
 - update buff reminder to match hud icon

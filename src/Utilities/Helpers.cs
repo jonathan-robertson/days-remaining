@@ -1,12 +1,9 @@
 ﻿using System;
 
-namespace DaysRemaining
+namespace DaysRemaining.Utilities
 {
     internal class Helpers
     {
-        private const string CVAR_VENDING_EXPIRATION = "daysRemainingVendingExpiration";
-        private const string BUFF_VENDING_EXPIRATION = "buffDaysRemainingVendingExpiration";
-
         private static readonly ModLog<Helpers> _log = new ModLog<Helpers>();
 
         public static bool TryGetTileEntityVendingMachine(Vector3i blockPos, out TileEntityVendingMachine tileEntityVendingMachine)
@@ -63,30 +60,6 @@ namespace DaysRemaining
             owner = tileEntityVendingMachine.GetOwner();
             rentalEndDay = tileEntityVendingMachine.RentalEndDay;
             return true;
-        }
-
-        /// <summary>
-        /// Call this to update the player's client-side data related to vending expiration date.
-        /// </summary>
-        /// <param name="clientInfo">ClientInfo containing the current rental information.</param>
-        /// <param name="player">EntityPlayer to update.</param>
-        public static void SetExpirationDaysRemaining(ClientInfo clientInfo, EntityPlayer player)
-        {
-            if (clientInfo == null || player == null)
-            {
-                _log.Warn($"ClientInfo and EntityPlayer params must not be null; ClientInfo {(clientInfo != null ? "exists" : "does not exist")}, EntityPlayer {(player != null ? "exists" : "does not exist")}.");
-                return;
-            }
-            if (clientInfo.latestPlayerData.rentalEndDay == 0)
-            {
-                return;
-            }
-            var daysRemaining = Math.Max(clientInfo.latestPlayerData.rentalEndDay - GameUtils.WorldTimeToDays(GameManager.Instance.World.worldTime), 0);
-            if (daysRemaining != player.GetCVar(CVAR_VENDING_EXPIRATION))
-            {
-                player.SetCVar(CVAR_VENDING_EXPIRATION, daysRemaining);
-                _ = player.Buffs.AddBuff(BUFF_VENDING_EXPIRATION);
-            }
         }
     }
 }

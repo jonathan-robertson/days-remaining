@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - update trader restock on login
 - update trader restock ui to days remaining
 
+## [1.0.2] - 2023-07-02
+
+- fix notification color
+- improve remaining rental time calculations
+- improve time trigger frequency
+
 ## [1.0.1] - 2023-06-30
 
 - update to support a21 b324 (stable)

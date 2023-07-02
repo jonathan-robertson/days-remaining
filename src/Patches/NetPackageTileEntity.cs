@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using DaysRemaining.Utilities;
+using HarmonyLib;
 using System;
 
 namespace DaysRemaining.Patches
@@ -31,7 +32,7 @@ namespace DaysRemaining.Patches
                                 clientInfo.latestPlayerData.rentalEndDay = tileEntityVendingMachine.RentalEndDay;
                                 // close the open trader (vending machine) window because the cvar cannot auto-refresh its ui value on its own
                                 clientInfo.SendPackage(NetPackageManager.GetPackage<NetPackageConsoleCmdClient>().Setup("xui close trader", true));
-                                Helpers.SetExpirationDaysRemaining(clientInfo, player);
+                                DayMonitor.SetExpirationDaysRemaining(clientInfo, player);
                             }
                         }
                     }

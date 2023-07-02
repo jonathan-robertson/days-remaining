@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DaysRemaining.Utilities
+﻿namespace DaysRemaining.Utilities
 {
     internal class Helpers
     {

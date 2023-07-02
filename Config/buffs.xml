@@ -6,5 +6,12 @@
             <display_value_key value="buffDaysRemainingVendingExpirationFormat" />
             <display_value value="daysRemainingVendingExpiration" />
         </buff>
+        <!-- TODO: remove -->
+        <buff name="cvarTest">
+            <duration value="1" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="restock_npcTraderJen" operation="set" value="2" />
+            </effect_group>
+        </buff>
     </append>
 </config>

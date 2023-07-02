@@ -28,6 +28,7 @@ namespace DaysRemaining.Utilities
                 if (Helpers.TryGetClientInfo(players[i].entityId, out var clientInfo))
                 {
                     SetExpirationDaysRemaining(clientInfo, players[i]);
+                    SetRestockDaysRemaining(clientInfo, players[i]);
                 }
             }
         }
@@ -56,6 +57,28 @@ namespace DaysRemaining.Utilities
                 player.SetCVar(CVAR_VENDING_EXPIRATION, daysRemaining);
                 _ = player.Buffs.AddBuff(BUFF_VENDING_EXPIRATION);
             }
+        }
+
+        internal static void SetRestockDaysRemaining(ClientInfo clientInfo, EntityPlayer player)
+        {
+            if (clientInfo == null || player == null)
+            {
+                _log.Warn($"ClientInfo and EntityPlayer params must not be null; ClientInfo {(clientInfo != null ? "exists" : "does not exist")}, EntityPlayer {(player != null ? "exists" : "does not exist")}.");
+                return;
+            }
+            /*
+            public int ResetIntervalInTicks = 24000;
+            traderInfo.ResetInterval = int.Parse(e.GetAttribute("reset_interval"));
+			traderInfo.ResetIntervalInTicks = traderInfo.ResetInterval * 24000;
+
+            if (this.TraderInfo == null)
+			{
+				return 0UL;
+			}
+			return this.lastInventoryUpdate + (ulong)((long)this.TraderInfo.ResetIntervalInTicks);
+
+            (float)((this.TraderInfo != null) ? this.TraderInfo.ResetIntervalInTicks : 0);
+             */
         }
 
         private static bool IsNewDay(out int day)

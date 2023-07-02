@@ -1,3 +1,10 @@
 <config>
     <set xpath="/windows/window[@name='windowTrader']/panel[@name='content']/rect[@name='searchControls']/label[@text='{renttimeleft}']/@text">{# localization('xuiExpires')}: {cvar(daysRemainingVendingExpiration:0)} {# localization('xuiBuffStatDays')}</set>
+    <!-- {tradername} -->
+    <set xpath="/windows/window[@name='windowTrader']/panel[@name='header']/label[@text='{restocklabel}: {timeleft}']/@text">{restocklabel}: {timeleft}</set>
+    <!--  {# localization('restockncpTraderJenFormat')} -->
+    <!-- {# localization('restock_' + (tradername))} -->
+
+    <!-- {# localization('dayOfTheWeek' + (day-1)%7)} -->
+    <!-- {# localization('restock_' + tradername)} -->
 </config>

@@ -51,6 +51,7 @@ namespace DaysRemaining
                         if (GameManager.Instance.World.Players.dict.TryGetValue(_cInfo.entityId, out var player))
                         {
                             DayMonitor.SetExpirationDaysRemaining(_cInfo, player);
+                            DayMonitor.SetRestockDaysRemaining(_cInfo, player);
                         }
                         return;
                 }

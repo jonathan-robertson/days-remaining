@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers.cs" />
-    <Compile Include="ModLog.cs" />
+    <Compile Include="Utilities\DayMonitor.cs" />
+    <Compile Include="Utilities\Helpers.cs" />
+    <Compile Include="Utilities\ModLog.cs" />
     <Compile Include="ModApi.cs" />
     <Compile Include="Patches\NetPackageTileEntity.cs" />
-    <Compile Include="Patches\World.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

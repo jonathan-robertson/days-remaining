@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DaysRemaining
+namespace DaysRemaining.Utilities
 {
     internal class ModLog<T>
     {

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - ?
 
 - add expired notification when at 0 days
+- add support for single player and p2p
 - improve readme
 - update references for 7dtd 1.0 b309
 

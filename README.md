@@ -1,10 +1,13 @@
 # Days Remaining
 
-[![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-1.0%20b308-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml)
+[![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-1.0%20b309-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml)
 
 - [Days Remaining](#days-remaining)
   - [Summary](#summary)
   - [Features](#features)
+    - [Signup Screenshots](#signup-screenshots)
+    - [Midnight / Logon Screenshots](#midnight--logon-screenshots)
+    - [Expiration Screenshots](#expiration-screenshots)
   - [Sister Project](#sister-project)
   - [Compatibility](#compatibility)
 
@@ -20,6 +23,28 @@
    - when logging in
    - when a new day triggers (at midnight)
 
+### Signup Screenshots
+
+![signup buff badge](https://github.com/jonathan-robertson/days-remaining/raw/media/signup-notification-1.png)
+
+![signup notification](https://github.com/jonathan-robertson/days-remaining/raw/media/signup-notification-2.png)
+
+![signup info panel](https://github.com/jonathan-robertson/days-remaining/raw/media/signup-notification-3.png)
+
+### Midnight / Logon Screenshots
+
+![midnight or logon buff badge](https://github.com/jonathan-robertson/days-remaining/raw/media/midnight-or-logon-notification-1.png)
+
+![midnight or logon notification](https://github.com/jonathan-robertson/days-remaining/raw/media/midnight-or-logon-notification-2.png)
+
+### Expiration Screenshots
+
+![expiration screenshot buff badge](https://github.com/jonathan-robertson/days-remaining/raw/media/expiration-notification-1.png)
+
+![expiration screenshot notification](https://github.com/jonathan-robertson/days-remaining/raw/media/expiration-notification-2.png)
+
+![expiration screenshot info panel](https://github.com/jonathan-robertson/days-remaining/raw/media/expiration-notification-3.png)
+
 ## Sister Project
 
 This mod is designed to be used with another to complete your experience:
@@ -33,5 +58,5 @@ This mod is designed to be used with another to complete your experience:
 Environment | Compatible | Does EAC Need to be Disabled? | Who needs to install?
 --- | --- | --- | ---
 Dedicated Server | Yes | no | only server
-Peer-to-Peer Hosting | Untested | N/A | N/A
-Single Player Game | Untested | N/A | N/A
+Peer-to-Peer Hosting | Yes | only for host | only host
+Single Player Game | Yes | Yes | self (of course)

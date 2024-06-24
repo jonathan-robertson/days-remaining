@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patches\TileEntityVendingMachine.cs" />
     <Compile Include="Utilities\DayMonitor.cs" />
     <Compile Include="Utilities\Helpers.cs" />
     <Compile Include="Utilities\ModLog.cs" />

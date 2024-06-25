@@ -73,8 +73,7 @@ namespace DaysRemaining.Utilities
         {
             if (primaryPlayer == null)
             {
-                _log.Warn("Called SetExpirationDaysRemaining with a null EntityPlayerLocal! This is not expected on a dedicated server, but will not break the game.");
-                return;
+                return; // dedicated server startup will exit here
             }
 
             if (primaryPlayer.RentedVMPosition == Vector3i.zero)

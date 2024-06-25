@@ -20,7 +20,7 @@
 1. Vending Machine Rental Expiration: replaces the existing 'date of' expiration value with a new value representing the number of remaining 'days until' expiration.
    - NOTE: this mod does not alter the actual days within a server (many components in the game rely on server/world time increasing); it simply updates how the days are reported for the Rentable Vending Machine Expiration Date.
 2. Expiration Reminders: a quick buff-powered reminder will display on your screen to ensure you're aware of the days until your vending machine expires:
-   - when logging in
+   - when logging in if at least one in-game day has passed since the player was last online
    - when a new day triggers (at midnight)
 
 ### Signup Screenshots

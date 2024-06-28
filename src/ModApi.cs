@@ -39,14 +39,11 @@ namespace DaysRemaining
         {
             try
             {
-                if (_cInfo == null) // local client
-                {
-                    // TODO: var ppId = ((_cInfo != null) ? _cInfo.InternalId : null) ?? PlatformManager.InternalLocalUserIdentifier;
-                    return;
-                }
-
                 switch (_respawnReason)
                 {
+                    case RespawnType.LoadedGame:
+                        DayMonitor.SetExpirationDaysRemaining(GameManager.Instance.World.GetPrimaryPlayer());
+                        return;
                     case RespawnType.JoinMultiplayer:
                         if (GameManager.Instance.World.Players.dict.TryGetValue(_cInfo.entityId, out var player))
                         {

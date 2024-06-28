@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [TODO]
+## [2.0.0] - 2024-06-24
 
-- update trader restock on day change
-- update trader restock on login
-- update trader restock ui to days remaining
+- add expired notification when at 0 days
+- add support for single player and p2p
+- improve readme
+- update references for 7dtd 1.0 b309
 
 ## [1.0.2] - 2023-07-02
 

@@ -7,4 +7,12 @@
             <display_value value="daysRemainingVendingExpiration" />
         </buff>
     </append>
+    <append xpath="/buffs">
+        <buff name="buffDaysRemainingVendingRentalExpired" name_key="buffDaysRemainingVendingRentalExpiredName" description_key="buffDaysRemainingVendingRentalExpiredDesc" tooltip_key="buffDaysRemainingVendingRentalExpiredTooltip" icon="ui_game_symbol_vending" icon_color="255,0,0">
+            <duration value="30" />
+            <stack_type value="duration" />
+            <display_value_key value="buffDaysRemainingVendingRentalExpiredFormat" />
+            <display_value value="xxx" />
+        </buff>
+    </append>
 </config>

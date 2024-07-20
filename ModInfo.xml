@@ -1,7 +1,7 @@
 <xml>
     <Name value="kanaverum-days-remaining" />
     <DisplayName value="Days Remaining" />
-    <Version value="2.0.1" />
+    <Version value="2.0.2" />
     <Description value="Update trader restock date and vending expiration date to show days until vs date of." />
     <Author value="Jonathan Robertson (Kanaverum)" />
     <Website value="https://github.com/jonathan-robertson/days-remaining" />

@@ -27,6 +27,11 @@ namespace DaysRemaining.Patches
                         {
                             if (GameManager.Instance.World.Players.dict.TryGetValue(clientInfo.entityId, out var player))
                             {
+                                if (clientInfo.latestPlayerData.rentalEndDay == tileEntityVendingMachine.RentalEndDay)
+                                {
+                                    return;
+                                }
+
                                 // update this data on server's end now since we know it'll be on the way next time a player save packet is sent from client.
                                 clientInfo.latestPlayerData.rentedVMPosition = ___teWorldPos;
                                 clientInfo.latestPlayerData.rentalEndDay = tileEntityVendingMachine.RentalEndDay;

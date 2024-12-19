@@ -1,12 +1,11 @@
 # Days Remaining
 
 [![🧪 Tested with 7DTD 1.2 (b27)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.2%20(b27)-blue.svg)](https://7daystodie.com/)
-[![🧪 Tested with 7DTD 1.1 (b14)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.1%20(b14)-blue.svg)](https://7daystodie.com/)
-[![🧪 Tested with 7DTD 1.0 (b333)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.0%20(b333)-blue.svg)](https://7daystodie.com/)
+[![👍 Should Be Compatible with 7DTD 1.1 (b14)](https://img.shields.io/badge/👍%20Should%20Be%20Compatible%20with-7DTD%201.1%20(b14)-blue.svg)](https://7daystodie.com/)
+[![👍 Should Be Compatible with 7DTD 1.0 (b333)](https://img.shields.io/badge/👍%20Should%20Be%20Compatible%20with-7DTD%201.0%20(b333)-blue.svg)](https://7daystodie.com/)
 
 [![✅ Dedicated Servers Supported ServerSide](https://img.shields.io/badge/✅%20Dedicated%20Servers-Supported%20Serverside-blue.svg)](https://7daystodie.com/)
 [![✅ Single Player and P2P Supported](https://img.shields.io/badge/✅%20Single%20Player%20and%20P2P-Supported-blue.svg)](https://7daystodie.com/)
-
 [![📦 Automated Release](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/days-remaining/actions/workflows/release.yml)
 
 ## Summary

@@ -4,7 +4,7 @@ using System;
 
 namespace DaysRemaining.Patches
 {
-    [HarmonyPatch(typeof(NetPackageTileEntity), "Setup", typeof(TileEntity), typeof(TileEntity.StreamModeWrite), typeof(byte))]
+    [HarmonyPatch(typeof(NetPackageTileEntity), nameof(NetPackageTileEntity.Setup), typeof(TileEntity), typeof(TileEntity.StreamModeWrite), typeof(byte))]
     internal class NetPackageTileEntity_Setup_Patches
     {
         private static readonly ModLog<NetPackageTileEntity_Setup_Patches> _log = new ModLog<NetPackageTileEntity_Setup_Patches>();

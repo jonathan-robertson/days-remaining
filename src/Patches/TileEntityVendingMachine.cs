@@ -4,7 +4,7 @@ using System;
 
 namespace DaysRemaining.Patches
 {
-    [HarmonyPatch(typeof(TileEntityVendingMachine), "Rent")]
+    [HarmonyPatch(typeof(TileEntityVendingMachine), nameof(TileEntityVendingMachine.Rent))]
     internal class TileEntityVendingMachine_Rent_Patches
     {
         private static readonly ModLog<TileEntityVendingMachine_Rent_Patches> _log = new ModLog<TileEntityVendingMachine_Rent_Patches>();

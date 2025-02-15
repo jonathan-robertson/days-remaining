@@ -1,5 +1,6 @@
 # Days Remaining
 
+[![🧪 Tested with 7DTD 1.3 (b9)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.3%20(b9)-blue.svg)](https://7daystodie.com/)
 [![🧪 Tested with 7DTD 1.2 (b27)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.2%20(b27)-blue.svg)](https://7daystodie.com/)
 [![👍 Should Be Compatible with 7DTD 1.1 (b14)](https://img.shields.io/badge/👍%20Should%20Be%20Compatible%20with-7DTD%201.1%20(b14)-blue.svg)](https://7daystodie.com/)
 [![👍 Should Be Compatible with 7DTD 1.0 (b333)](https://img.shields.io/badge/👍%20Should%20Be%20Compatible%20with-7DTD%201.0%20(b333)-blue.svg)](https://7daystodie.com/)
